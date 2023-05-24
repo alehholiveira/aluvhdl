@@ -1,0 +1,71 @@
+|fulladder4subtracao
+X[0] => fulladder4:stage0.X
+X[1] => fulladder4:stage1.X
+X[2] => fulladder4:stage2.X
+X[3] => fulladder4:stage3.X
+Y[0] => fulladder4:stage0.Y
+Y[1] => fulladder4:stage1.Y
+Y[2] => fulladder4:stage2.Y
+Y[3] => fulladder4:stage3.Y
+S[0] <= fulladder4:stage0.s
+S[1] <= fulladder4:stage1.s
+S[2] <= fulladder4:stage2.s
+S[3] <= fulladder4:stage3.s
+
+
+|fulladder4subtracao|fulladder4:stage0
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder4subtracao|fulladder4:stage1
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder4subtracao|fulladder4:stage2
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder4subtracao|fulladder4:stage3
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
