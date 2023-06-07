@@ -1,0 +1,24 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY subtractor IS
+    PORT (X, Y : in std_logic_vector(3 DOWNTO 0);
+			 Difference : out std_logic_vector(3 DOWNTO 0));
+end subtractor;
+
+architecture alu of subtractor is
+    component fulladder4
+        port (Cin, x, y : IN STD_LOGIC;
+				  s, Cout : OUT STD_LOGIC);
+    end component;
+
+    signal Borrow : std_logic;
+    signal D : std_logic_vector(3 downto 0);
+begin
+    D <= not Y;  -- Inverte os bits de Y
+
+    FA0 : fulladder4 port map (Borrow, X(0), D(0), Difference(0), Borrow);
+    FA1 : fulladder4 port map (Borrow, X(1), D(1), Difference(1), Borrow);
+    FA2 : fulladder4 port map (Borrow, X(2), D(2), Difference(2), Borrow);
+    FA3 : fulladder4 port map (Borrow, X(3), D(3), Difference(3), Borrow);
+end alu;
