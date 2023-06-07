@@ -1,5 +1,5 @@
 --PROJETO 1 - UNIDADE LÓGICA ARITMÉTICA
-	--Alexandre Augusto Tescaro Oliveira
+	--Alexandre Oliveira
 	--Hugo Tahara Menegatti
 
 library ieee;
